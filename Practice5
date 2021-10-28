@@ -1,0 +1,31 @@
+1* 
+
+def main():
+    list1= [1,2,3,4,5,6,7,8,9]
+    n = int(input('Введите число: '))
+    print([x  for x in list1 if x > n])
+main() 
+
+2*
+-
+3*
+
+inp = input().split()
+print(inp[0][0]+"."+inp[1][0]+"."+inp[2][0]+".")
+
+4* (ссылка на онлайн питон)
+
+https://onlinegdb.com/xhA9wTFP3
+
+5*
+-
+6* (?, не через словарь)
+
+s = input()
+c=0
+a=0
+for i in s:
+    if s.count(i)>=c:
+        c=s.count(i)
+        a=i
+print(a)
