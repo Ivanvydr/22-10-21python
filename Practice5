@@ -6,8 +6,36 @@ def main():
     print([x  for x in list1 if x > n])
 main() 
 
-2*
--
+# 2) квадрат Ло-Шу
+
+def n2(a):
+
+    flag = 1
+    ps_const=sum(a[0]) 
+    r=[]
+    
+    for k in [0,1,2]: # проверка суммы чисел
+        if ps_const != sum(a[k]):
+            flag = 0
+            
+        if ps_const!=a[0][k]+a[1][k]+a[2][k]:
+            flag = 0
+            
+        for j in [0,1,2]: # проверка на 9 различных чисел
+            r.append(int(a[k][j]))
+
+    if sorted(r) != [int(i) for i in range(1,10)]:
+        flag = 0
+        
+
+    if flag==1:
+        print("это квадрат Ло-Шу")
+    else:
+        print("это не квадрат Ло-Шу")
+
+    nom()
+    
+    
 3*
 
 inp = input().split()
@@ -17,15 +45,29 @@ print(inp[0][0]+"."+inp[1][0]+"."+inp[2][0]+".")
 
 https://onlinegdb.com/xhA9wTFP3
 
-5*
--
-6* (?, не через словарь)
+# 5) гласные и согласные
+def wordsAB():
+    print("ввод:  ", end=" ")
+    s=str(input())
+    print("для вывода количества согласных нажмите: 1 , гласных: 2")
+    #print("", end=" ")
+    i =int(input())
+    if i == 1:
+        n5_2(s)
+    elif i == 2:
+        n5_1(s)
+    nom()
+    
+# 6) чаще всего встречающийся символ
 
-s = input()
-c=0
-a=0
-for i in s:
-    if s.count(i)>=c:
-        c=s.count(i)
-        a=i
-print(a)
+def mostw():
+    print("введите строку: ")
+    s=str(input())
+    lit={}
+    while len(s) >0:
+        lit[s.count(s[0])]=s[0]
+        s=s.replace(s[0], "")
+    n=max([*lit])
+    
+    print("чаще всего встречается: ", lit[n])
+    nom()
