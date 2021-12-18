@@ -47,6 +47,7 @@ https://onlinegdb.com/xhA9wTFP3
 
 # 5) гласные и согласные
 def wordsAB():
+
     print("ввод:  ", end=" ")
     s=str(input())
     print("для вывода количества согласных нажмите: 1 , гласных: 2")
@@ -61,6 +62,7 @@ def wordsAB():
 # 6) чаще всего встречающийся символ
 
 def mostw():
+
     print("введите строку: ")
     s=str(input())
     lit={}
